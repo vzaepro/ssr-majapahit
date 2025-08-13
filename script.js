@@ -1,4 +1,4 @@
-// Hamburger menu toggle
+// Hamburger toggle
 const hamburger = document.getElementById('hamburger-icon');
 const slideMenu = document.getElementById('slide-menu');
 hamburger.addEventListener('click', () => {
@@ -6,30 +6,18 @@ hamburger.addEventListener('click', () => {
   slideMenu.style.right = slideMenu.style.right === '0px' ? '-250px' : '0px';
 });
 window.addEventListener('click', e => {
-  if (!hamburger.contains(e.target) && !slideMenu.contains(e.target)) {
+  if(!hamburger.contains(e.target) && !slideMenu.contains(e.target)) {
     hamburger.classList.remove('active');
     slideMenu.style.right = '-250px';
   }
 });
 
-// Mode Gelap/Terang
+// Mode gelap
 const themeToggle = document.getElementById('theme-toggle');
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-});
+themeToggle.addEventListener('click', () => document.body.classList.toggle('dark'));
 
-// Inisialisasi Lightbox
-const lightbox = new SimpleLightbox('.gallery-item', {
-  captionsData: 'alt',
-  captionDelay: 250,
-  overlayOpacity: 0.9,
-  closeText: '×',
-  navText: ['←', '→'],
-});
-
-// Animasi masuk galeri bertahap
-slides.forEach((slide, index) => {
-  setTimeout(() => {
-    slide.classList.add('show');
-  }, index * 200); // 200ms delay per gambar
+// Animasi galeri bertahap
+const galleryItems = document.querySelectorAll('.gallery-item');
+galleryItems.forEach((item,index)=>{
+  setTimeout(()=>{ item.classList.add('show'); }, index*200);
 });
