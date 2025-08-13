@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Portofolio</div>
+    <div class="header-right">
+      <button id="theme-toggle">
+        <i class="fas fa-sun"></i>
+      </button>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#about">About</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home -->
+    <section id="home" class="home">
+      <h1>Halo, Saya Nama Anda</h1>
+      <p>Selamat datang di portofolio saya. Silakan jelajahi galeri dan informasi tentang saya.</p>
+      <a href="#gallery" class="btn">Lihat Galeri</a>
+    </section>
+
+    <!-- Galeri -->
+    <section id="gallery" class="gallery">
+      <h2>Galeri</h2>
+      <div class="gallery-container">
+        <div class="gallery-slide"><img src="photos/img1.jpeg" alt="img1"></div>
+        <div class="gallery-slide"><img src="photos/img2.jpeg" alt="img2"></div>
+        <div class="gallery-slide"><img src="photos/img3.jpeg" alt="img3"></div>
+        <div class="gallery-slide"><img src="photos/img4.jpeg" alt="img4"></div>
+        <div class="gallery-slide"><img src="photos/img5.jpeg" alt="img5"></div>
+        <div class="gallery-slide"><img src="photos/img6.jpeg" alt="img6"></div>
+        <div class="gallery-slide"><img src="photos/img7.jpeg" alt="img7"></div>
+        <div class="gallery-slide"><img src="photos/img8.jpeg" alt="img8"></div>
+        <div class="gallery-slide"><img src="photos/img9.jpeg" alt="img9"></div>
+        <div class="gallery-slide"><img src="photos/img10.jpeg" alt="img10"></div>
+        <div class="gallery-slide"><img src="photos/img11.jpeg" alt="img11"></div>
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya adalah [profesi/hobi kamu], memiliki ketertarikan pada [bidang].  
+        Saya suka membuat karya kreatif dan mengeksplorasi teknologi baru.  
+        Website ini saya buat untuk berbagi hasil karya dan perjalanan saya.
+      </p>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" class="contact">
+      <h2>Kontak</h2>
+      <p>Telepon: <a href="tel:+628123456789">+62 812-3456-789</a></p>
+      <div class="social-icons">
+        <a href="https://wa.me/628123456789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/username" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/username" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #4CAF50;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--bg-color);
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+nav a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+section {
+  padding: 40px 20px;
+}
+
+.home {
+  text-align: center;
+}
+
+.home .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.gallery {
+  text-align: center;
+}
+
+.gallery-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  scroll-behavior: smooth;
+}
+
+.gallery-slide img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.about {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact {
+  text-align: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: var(--text-color);
+}
