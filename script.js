@@ -26,3 +26,10 @@ const lightbox = new SimpleLightbox('.gallery-item', {
   closeText: '×',
   navText: ['←', '→'],
 });
+
+// Animasi masuk galeri bertahap
+slides.forEach((slide, index) => {
+  setTimeout(() => {
+    slide.classList.add('show');
+  }, index * 200); // 200ms delay per gambar
+});
