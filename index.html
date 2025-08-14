@@ -63,6 +63,21 @@
   .gallery-slide { min-width:100%; }
   .gallery-slide img { width:100%; height:auto; display:block; }
 
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 30px auto 0;
+}
+
+.galeri-grid .grid-item {
+  background: rgba(255,255,255,0.9);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
   /* ===== Sosmed ===== */
   .social-icons { margin-top:15px; }
   .social-icons a { margin-right:10px; text-decoration:none; font-size:1.5em; color:#000; }
@@ -351,23 +366,29 @@
 <!-- ===== GALERI ===== -->
 <section id="galeri" style="display:none;">
   <h1>Galeri</h1>
-  <div class="gallery-container">
-    <div class="gallery" id="gallery">
-      <div class="gallery-slide"><img src="photos/img1.jpeg" alt="img1"></div>
-      <div class="gallery-slide"><img src="photos/img2.jpeg" alt="img2"></div>
-      <div class="gallery-slide"><img src="photos/img3.jpeg" alt="img3"></div>
-      <div class="gallery-slide"><img src="photos/img4.jpeg" alt="img4"></div>
-      <div class="gallery-slide"><img src="photos/img5.jpeg" alt="img5"></div>
-      <div class="gallery-slide"><img src="photos/img6.jpeg" alt="img6"></div>
-      <div class="gallery-slide"><img src="photos/img7.jpeg" alt="img7"></div>
-      <div class="gallery-slide"><img src="photos/img8.jpeg" alt="img8"></div>
-      <div class="gallery-slide"><img src="photos/img9.jpeg" alt="img9"></div>
-      <div class="gallery-slide"><img src="photos/img10.jpeg" alt="img10"></div>
-      <div class="gallery-slide"><img src="photos/img11.jpeg" alt="img11"></div>
-      <div class="gallery-slide"><img src="photos/img12.jpeg" alt="img12"></div>
-      <div class="gallery-slide"><img src="photos/img13.jpeg" alt="img13"></div>
-      <div class="gallery-slide"><img src="photos/img14.jpeg" alt="img14"></div>
-      <div class="gallery-slide"><img src="photos/img15.jpeg" alt="img15"></div>
+  
+  <!-- Grid wrapper untuk seluruh slider -->
+  <div class="galeri-grid">
+    <div class="grid-item">
+      <div class="gallery-container">
+        <div class="gallery" id="gallery">
+          <div class="gallery-slide"><img src="photos/img1.jpeg" alt="img1"></div>
+          <div class="gallery-slide"><img src="photos/img2.jpeg" alt="img2"></div>
+          <div class="gallery-slide"><img src="photos/img3.jpeg" alt="img3"></div>
+          <div class="gallery-slide"><img src="photos/img4.jpeg" alt="img4"></div>
+          <div class="gallery-slide"><img src="photos/img5.jpeg" alt="img5"></div>
+          <div class="gallery-slide"><img src="photos/img6.jpeg" alt="img6"></div>
+          <div class="gallery-slide"><img src="photos/img7.jpeg" alt="img7"></div>
+          <div class="gallery-slide"><img src="photos/img8.jpeg" alt="img8"></div>
+          <div class="gallery-slide"><img src="photos/img9.jpeg" alt="img9"></div>
+          <div class="gallery-slide"><img src="photos/img10.jpeg" alt="img10"></div>
+          <div class="gallery-slide"><img src="photos/img11.jpeg" alt="img11"></div>
+          <div class="gallery-slide"><img src="photos/img12.jpeg" alt="img12"></div>
+          <div class="gallery-slide"><img src="photos/img13.jpeg" alt="img13"></div>
+          <div class="gallery-slide"><img src="photos/img14.jpeg" alt="img14"></div>
+          <div class="gallery-slide"><img src="photos/img15.jpeg" alt="img15"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
