@@ -95,7 +95,7 @@
     border-radius: 12px;
     background: rgba(255,255,255,0.9);
     box-shadow:0 2px 6px rgba(0,0,0,0.05);
-    transition: tranform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     color:#333;
   }
   .grid-item:hover {
@@ -175,7 +175,33 @@
   }
   .about-content { padding: 20px; }
   .about-content h2 { font-size: 1.6em; font-weight: bold; color: var(--brand-orange); margin-bottom: 10px; }
-  .about-content p { font-size: 1em; color: #333; line-height: 1.6; }
+  .about-content p { font-size: 1em; color: #333; line-height: 1.6; 
+}
+.about-extra-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:20px;
+  max-width:900px;
+  margin: 24px auto 0;
+}
+
+.about-item{
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+.about-item h3{
+  margin:0 0 10px;
+  color: var(--brand-orange);
+}
+
+.about-contact-btn{
+  max-width:900px;
+  margin: 24px auto 0;
+  text-align:center;
+}
 
   /* Tombol Hubungi Kami (oranye + ikon putih) */
   .whatsapp-btn {
@@ -338,8 +364,8 @@
 
 <!-- ===== ABOUT ===== -->
 <section id="about" style="display:none;">
+  <!-- Grid 1: Tentang Kami -->
   <div class="about-grid">
-    <!-- Kartu Grid -->
     <div class="about-card">
       <img src="photos/about.jpg" alt="Tentang SSR Majapahit" class="about-image">
       <div class="about-content">
@@ -349,16 +375,34 @@
           melayani pembuatan pagar dan gapura Majapahit. Perusahaan ini tercetus dan telah berdiri sejak tahun 2020 silam.
           Dengan minimnya ide kontraktor yang bergerak pada karya seni rupa Majapahit akhirnya perusahaan ini tercipta.
         </p>
-        <!-- Tombol Hubungi Kami (oranye) -> menuju Kontak -->
-        <a href="#kontak" class="whatsapp-btn" onclick="goToKontak(event)">
-          <i class="fab fa-whatsapp whatsapp-icon"></i> Hubungi Kami
-        </a>
       </div>
     </div>
+  </div>
 
-    <!-- CTA foto paling bawah DIHAPUS sesuai permintaan -->
+  <!-- Grid 2: Visi & Misi -->
+  <div class="about-extra-grid">
+    <div class="about-item">
+      <h3>Visi</h3>
+      <p>Menjadi perusahaan kontraktor terbaik di bidang karya seni rupa pada masa kerajaan yang inovatif, berkualitas, dan terpercaya.</p>
+    </div>
+    <div class="about-item">
+      <h3>Misi</h3>
+      <ul style="margin:0; padding-left:18px;">
+        <li>Menghadirkan desain autentik dan berkualitas.</li>
+        <li>Menjaga ketepatan waktu dan standar mutu proyek.</li>
+        <li>Mengedepankan pelayanan dan kepuasan pelanggan.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Tombol Hubungi Kami di bawah semua grid -->
+  <div class="about-contact-btn">
+    <a href="#kontak" class="whatsapp-btn" onclick="goToKontak(event)">
+      <i class="fab fa-whatsapp whatsapp-icon"></i> Hubungi Kami
+    </a>
   </div>
 </section>
+
 
 <!-- ===== GALERI ===== -->
 <section id="galeri" style="display:none;">
